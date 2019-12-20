@@ -154,9 +154,11 @@ var squareWay = function(event) {
 }
 
 var stopClick = function(event) {
-	score++;
-	textScore.text('Score is: ' + score);
-	if (score >= 10) {
+	if (score < 10) {
+		score++;
+		textScore.text('Score is: ' + score);
+	}	
+	if (score == 10) {
 		clearInterval(squareID);
 		textToWinner = alert('You are winner!');
 		$('body').append('<a href="carsRideHTML/index.html">Play in @CarsRace</a>');
