@@ -24,7 +24,7 @@ Car.prototype.moveRight = function(speed) {
 		$('body').append('<h1>'+this.name+' is winner!</h1>');
 		clearInterval(driveTesla);
 		clearInterval(driveNussan);
-		setTimeout(function(){location.href="pigGameHTML/index.html"} , 3000);
+		setTimeout(function(){location.href="../pigGameHTML/index.html"} , 3000);
 	}
 	this.x += speed;
 	this.carElement.css({
