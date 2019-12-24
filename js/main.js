@@ -161,7 +161,8 @@ var stopClick = function(event) {
 	if (score == 10) {
 		clearInterval(squareID);
 		textToWinner = alert('You are winner!');
-		$('body').append('<a href="carsRideHTML/index.html">Play in @CarsRace</a>');
+		//$('body').append('<a href="carsRideHTML/index.html">Play in @CarsRace</a>');
+		setTimeout(function(){location.href="carsRideHTML/index.html"} , 3000);
 		clearInterval(squareID);
 		score = -1
 	}
