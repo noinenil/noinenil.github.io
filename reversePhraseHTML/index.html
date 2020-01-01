@@ -6,28 +6,32 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
+
 <body>
-	<div class="container" align="center">	
+ <div id="page-container">
+   <div id="content-wrap">
 		<div class="mt-5" id="app">
 			<h1> HELLO </h1>
-			<input type="text" v-on:input='changeName' placeholder="write your phrase here">
+			<div class="phrase">
+				<input type="text" v-on:input='changeName' placeholder="write your phrase here">
+			</div>
 			<p class="mb-6">	Is this your reverse phrase?!</p>
-			<p class="mt-6"><strong>{{ name.split('').reverse().join('').toUpperCase() }}</strong></p>
+			<div class="reverse-phrase">
+				<p class="mt-6"><strong>{{ name.split('').reverse().join('').toUpperCase() }}</strong></p>
+			</div>
 		</div>
 	</div>
-	<div class="fixed-bottom">
-		<p>
-			Created by Red Naxela Inc.
-			<br>01.01.2020
-		</p>
-	</div>
+   <footer id="footer">
+   		<p>Created by Red Naxela Inc.<br>01.01.2020</p>
+   </footer>
+ </div>
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script src="js/unselectObjects.js"></script>
 	<script>
 		new Vue({
 			el: '#app',
 			data:{
-				name:'',
+				name:' ',
 			},
 			methods:{
 				changeName: function(event) {
