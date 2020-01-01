@@ -1,0 +1,15 @@
+body {
+	font-family: sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+input, h1, p {
+	text-align: center;
+}
+
+strong {
+	font-size: 500%;
+}
